@@ -1,6 +1,6 @@
 <canvas id="gc" width="400" height="400"></canvas>
 <div id="score">0</div>
-<div id=gagne"> ... </div>
+<div id="gagne"> ... </div>
 <script>
 
 	px=py=10;
@@ -14,7 +14,6 @@
 
 window.onload=function() {
 	canv=document.getElementById("gc");
-	res=document.getElementById("gagne");
 	ctx=canv.getContext("2d");
 	document.addEventListener("keydown",keyPush);
 		setInterval(game,1250/15);
@@ -76,7 +75,8 @@ function game() {
 		ctx.fillRect(ax*gs,ay*gs,gs-2,gs-2);
 	}else {
 		console.log("perdu");
-		res.innerHTML = "perdu";
+		gagne=document.getElementById("gagne");
+		gagne.innerHTML = "perdu";
 	}
 
 
