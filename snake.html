@@ -1,6 +1,18 @@
-<canvas id="gc" width="400" height="400"></canvas>
-<div id="score">0</div>
-<div id="gagne"> ... </div>
+<!doctype html>
+<head>
+
+	<link rel="stylesheet" type="text/css" href="styleCss.css">
+	<meta utf-8>
+
+</head>
+<body>
+
+<header><h1 id="titre">Snake</h1></header>
+
+<article>
+<div id="canvasDecoration"><canvas id="gc" width="400" height="400"></canvas></div>
+<div id="scorePoint"><div id="titreScore"><h2>Score : </h2></div><div id="score">0</div>
+<div id="gagne"> ... </div></div>
 <script>
 
 	px=py=10;
@@ -74,9 +86,9 @@ function game() {
 		ctx.fillStyle="red";
 		ctx.fillRect(ax*gs,ay*gs,gs-2,gs-2);
 	}else {
-		console.log("perdu");
+		console.log("Perdu");
 		gagne=document.getElementById("gagne");
-		gagne.innerHTML = "perdu";
+		gagne.innerHTML = "Perdu";
 	}
 
 
@@ -100,3 +112,12 @@ function keyPush(evt) {
 	}
 }
 </script>
+</article>
+
+<footer>
+<p id="iut">IUT du Limousin</p>
+<p id="personne">Alexander KURTH, Lewis LUCAS, Quentin LENOIR et Axel GUZA</p>
+</footer>
+
+</body>
+</html>
